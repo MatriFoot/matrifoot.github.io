@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Danil Versache — разработчик Telegram-ботов, веб-сайтов и систем автоматизации. Python, Kotlin, TypeScript. Создание чат-ботов, лендингов, интеграций.">
-    <meta name="keywords" content="разработчик телеграм ботов, python, kotlin, typescript, чат-боты, автоматизация, создание сайтов, веб-разработка, лендинг, интеграции, телеграм магазин, модерация чатов">
+    <meta name="description" content="Danil Versache — разработчик Telegram-ботов, веб-сайтов и систем автоматизации. Python, Kotlin, TypeScript, Go. Создание чат-ботов, лендингов, интеграций.">
+    <meta name="keywords" content="разработчик телеграм ботов, python, kotlin, typescript, go, чат-боты, автоматизация, создание сайтов, веб-разработка, лендинг, интеграции, телеграм магазин, модерация чатов">
     <title>Danil Versache — разработчик ботов и сайтов</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -40,16 +40,6 @@
             box-shadow: 0 0 20px rgba(0,255,200,0.05);
             position: relative;
             z-index: 1;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         h1 {
@@ -108,13 +98,7 @@
             border-radius: 8px;
             font-weight: 500;
             color: #ddd;
-            transition: box-shadow 0.4s ease;
-            animation: softGlow 3s infinite alternate;
-        }
-
-        @keyframes softGlow {
-            0% { box-shadow: 0 0 5px rgba(0,255,200,0.1); }
-            100% { box-shadow: 0 0 15px rgba(0,255,200,0.25); }
+            box-shadow: 0 0 6px rgba(0,255,200,0.1);
         }
 
         .btn {
@@ -150,7 +134,6 @@
                 grid-template-columns: 1fr 1fr;
             }
         }
-
         @media (max-width: 380px) {
             .services-grid {
                 grid-template-columns: 1fr;
@@ -168,23 +151,23 @@
         <h2>О себе</h2>
         <p>
             Проектирую и внедряю высоконагруженные Telegram-боты, автоматизированные системы и веб-интерфейсы. 
-            Работаю с современными технологиями: Python, Kotlin, TypeScript, SQL. 
+            Работаю с современными технологиями: Python, Kotlin, TypeScript, Go, SQL. 
             Опыт коммерческой разработки с 2024 года. Открыт к сложным проектам и долгосрочному сотрудничеству.
         </p>
 
         <h2>Ключевые компетенции</h2>
         <div class="services-grid">
-            <div class="service-item">Telegram-боты (aiogram, telebot)</div>
+            <div class="service-item">Telegram-боты (aiogram)</div>
             <div class="service-item">Модерация и иерархии</div>
             <div class="service-item">Магазины и приём платежей</div>
             <div class="service-item">Веб-сайты и лендинги</div>
             <div class="service-item">API-интеграции</div>
-            <div class="service-item">Базы данных (SQLite, PostgreSQL)</div>
+            <div class="service-item">Базы данных (SQL, Redis)</div>
         </div>
 
         <h2>Услуги</h2>
         <ul>
-            <li>Разработка Telegram-ботов любой сложности — от простых автоответчиков до многоуровневых систем с админ-панелями</li>
+            <li>Разработка Telegram-ботов любой сложности — от автоответчиков до многоуровневых систем с админ-панелями</li>
             <li>Создание веб-сайтов и лендингов (HTML/CSS, адаптивная вёрстка, GitHub Pages)</li>
             <li>Автоматизация бизнес-процессов через ботов и скрипты</li>
             <li>Интеграция с внешними API, платёжными системами, CRM</li>
@@ -193,19 +176,17 @@
         </ul>
 
         <h2>Технологический стек</h2>
-        <p><strong>Языки:</strong> Python (основной), Kotlin, TypeScript</p>
-        <p><strong>Библиотеки:</strong> aiogram, python-telegram-bot, Flask, FastAPI</p>
+        <p><strong>Языки:</strong> Python (основной), Kotlin, TypeScript, Go</p>
+        <p><strong>Библиотеки:</strong> aiogram, FastAPI, Pydantic, SQLAlchemy</p>
         <p><strong>Базы данных:</strong> SQLite, PostgreSQL, Redis</p>
-        <p><strong>Инструменты:</strong> Git, Docker, Termux, GitHub Actions</p>
+        <p><strong>Инструменты:</strong> Git, Docker, CI/CD (GitHub Actions), Linux</p>
 
         <h2>Связаться</h2>
         <p>Telegram: <a href="https://t.me/EbenaVosh">@EbenaVosh</a></p>
         <a class="btn" href="https://t.me/EbenaVosh">Написать в Telegram</a>
 
         <hr>
-        <footer>
-            Danil Versache — разработка ботов и веб-решений
-        </footer>
+        <footer>прайс в лс</footer>
     </div>
 
     <script>
@@ -214,7 +195,7 @@
 
         let width, height;
         const particles = [];
-        const MAX_PARTICLES = 50;
+        const MAX_PARTICLES = 60; // больше частиц для заметности
 
         function resize() {
             width = window.innerWidth;
@@ -232,9 +213,9 @@
             reset() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * height;
-                this.size = Math.random() * 2 + 0.5;
-                this.speed = Math.random() * 0.4 + 0.1;
-                this.opacity = Math.random() * 0.3 + 0.1;
+                this.size = Math.random() * 3 + 1; // крупнее
+                this.speed = Math.random() * 0.5 + 0.2;
+                this.opacity = Math.random() * 0.6 + 0.2; // ярче
             }
             update() {
                 this.y -= this.speed;
@@ -267,4 +248,4 @@
         animate();
     </script>
 </body>
-    </html>
+</html>
