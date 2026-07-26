@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Danil Versache — разработчик Telegram-ботов, веб-сайтов и систем автоматизации. Python, Kotlin, TypeScript, Go.">
-    <meta name="keywords" content="разработчик телеграм ботов, python, kotlin, typescript, go, чат-боты, автоматизация, создание сайтов, веб-разработка, лендинг, интеграции">
+    <meta name="description" content="Danil Versache — разработчик Telegram-ботов, веб-сайтов и систем автоматизации. Python, Kotlin, TypeScript, Go. Портфолио: Lunariq, ParserClub, Shazam-бот.">
+    <meta name="keywords" content="разработчик телеграм ботов, python, kotlin, typescript, go, чат-боты, автоматизация, создание сайтов, веб-разработка, лендинг, интеграции, портфолио">
     <title>Danil Versache — разработчик ботов и сайтов</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            background: #0f0f0f;
+            background: #0a0a0a;
             color: #d0d0d0;
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            line-height: 1.7;
+            line-height: 1.6;
             display: flex;
             justify-content: center;
             padding: 2rem 1rem;
@@ -21,7 +21,7 @@
             overflow-x: hidden;
         }
 
-        /* Частицы (увеличенная яркость и размер) */
+        /* Оптимизированные частицы – меньше, без теней */
         canvas#particles {
             position: fixed;
             top: 0;
@@ -30,33 +30,39 @@
             height: 100%;
             z-index: 0;
             pointer-events: none;
-            opacity: 0.9; /* общая яркость слоя */
+            opacity: 0.4;  /* приглушаем, чтобы не отвлекали */
         }
 
         .card {
-            max-width: 720px;
+            max-width: 780px;
             width: 100%;
-            background: rgba(26, 26, 26, 0.8); /* лёгкая прозрачность, чтобы частицы просвечивали */
-            backdrop-filter: blur(10px); /* эффект матового стекла */
-            border-radius: 16px;
+            background: #141414;
+            border-radius: 20px;
             padding: 3rem 2.5rem;
-            box-shadow: 0 0 30px rgba(0,255,200,0.08);
+            box-shadow: 0 0 40px rgba(0,255,200,0.05);
             position: relative;
             z-index: 1;
+            /* Лёгкое появление */
+            animation: fadeIn 0.8s ease;
         }
 
-        /* Неоновое имя с плавной анимацией перехода цветов */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             font-weight: 700;
-            margin-bottom: 0.4rem;
-            letter-spacing: 2px;
+            margin-bottom: 0.3rem;
+            letter-spacing: 1.5px;
             background: linear-gradient(90deg, #00ffc8, #00aaff, #aa00ff, #00ffc8);
             background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: neonShift 6s ease infinite;
-            filter: drop-shadow(0 0 8px rgba(0,255,200,0.5));
+            animation: neonShift 8s linear infinite;
+            /* Убираем drop-shadow для производительности */
+            line-height: 1.2;
         }
 
         @keyframes neonShift {
@@ -66,32 +72,23 @@
         }
 
         .subtitle {
-            color: #999;
+            color: #888;
             font-size: 1.1rem;
             margin-bottom: 2.5rem;
             font-weight: 400;
-            text-shadow: 0 0 5px rgba(0,255,200,0.3);
+            letter-spacing: 0.3px;
         }
 
         h2 {
             font-size: 1.2rem;
             font-weight: 600;
             color: #00ffc8;
-            margin: 2rem 0 1rem;
+            margin: 2.5rem 0 1rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
+            letter-spacing: 1.5px;
+            border-bottom: 1px solid rgba(0, 255, 200, 0.25);
+            padding-bottom: 0.5rem;
             display: inline-block;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #00ffc8, transparent);
         }
 
         p {
@@ -106,11 +103,10 @@
         }
 
         ul li {
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.5rem;
             padding-left: 1.5rem;
             position: relative;
             color: #bbb;
-            transition: color 0.2s;
         }
 
         ul li::before {
@@ -120,45 +116,65 @@
             color: #00ffc8;
         }
 
-        .services-grid {
+        .services-grid,
+        .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 0.8rem;
             margin-bottom: 1.5rem;
         }
 
-        .service-item {
-            background: #222;
-            padding: 1rem;
-            border-radius: 8px;
+        .service-item,
+        .portfolio-item {
+            background: #1e1e1e;
+            padding: 1rem 1.2rem;
+            border-radius: 12px;
             font-weight: 500;
             color: #ddd;
-            box-shadow: 0 0 6px rgba(0,255,200,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #2a2a2a;
+            transition: border-color 0.2s, background 0.2s;
+            text-decoration: none;
+            display: block;
         }
 
-        .service-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 15px rgba(0,255,200,0.3);
+        .service-item:hover,
+        .portfolio-item:hover {
+            border-color: #00ffc8;
+            background: #222;
+        }
+
+        .portfolio-item .bot-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .portfolio-item .bot-desc {
+            font-size: 0.85rem;
+            color: #999;
+            line-height: 1.3;
         }
 
         .btn {
             display: inline-block;
             background: #00ffc8;
             color: #000;
-            padding: 0.75rem 2rem;
+            padding: 0.7rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             margin-top: 1.5rem;
-            transition: background 0.2s, box-shadow 0.2s;
+            transition: background 0.2s;
             font-size: 1rem;
-            box-shadow: 0 0 15px rgba(0,255,200,0.4);
+            letter-spacing: 0.5px;
         }
 
         .btn:hover {
             background: #00ddaa;
-            box-shadow: 0 0 25px rgba(0,255,200,0.8);
         }
 
         a { color: #00ffc8; text-decoration: none; }
@@ -174,18 +190,14 @@
             text-align: center;
             color: #666;
             font-size: 0.9rem;
+            letter-spacing: 0.3px;
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 600px) {
             .card { padding: 2rem 1.5rem; }
             h1 { font-size: 2rem; }
-            .services-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 380px) {
-            .services-grid {
+            .services-grid,
+            .portfolio-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -204,6 +216,22 @@
             Работаю с современными технологиями: Python, Kotlin, TypeScript, Go, SQL. 
             Опыт коммерческой разработки с 2024 года. Открыт к сложным проектам и долгосрочному сотрудничеству.
         </p>
+
+        <h2>Портфолио</h2>
+        <div class="portfolio-grid">
+            <a href="https://t.me/Lunariqbot" target="_blank" class="portfolio-item">
+                <div class="bot-name">🌙 @Lunariqbot</div>
+                <div class="bot-desc">Модератор для англоязычного сообщества. Роли, муты, баны, автоматические фильтры.</div>
+            </a>
+            <a href="https://t.me/ParserClubbot" target="_blank" class="portfolio-item">
+                <div class="bot-name">📊 @ParserClubbot</div>
+                <div class="bot-desc">Парсер аудитории Telegram-каналов. Сбор статистики, экспорт в CSV, аналитика.</div>
+            </a>
+            <a href="https://t.me/whydidnairburnmyskinbot" target="_blank" class="portfolio-item">
+                <div class="bot-name">🎵 @whydidnairburnmyskinbot</div>
+                <div class="bot-desc">Распознавание музыки по мелодии. Отправь аудио — получи название трека и ссылку.</div>
+            </a>
+        </div>
 
         <h2>Ключевые компетенции</h2>
         <div class="services-grid">
@@ -240,12 +268,12 @@
     </div>
 
     <script>
+        // Облегчённый вариант частиц – 40 шт., без теней и сложных цветов
         const canvas = document.getElementById('particles');
         const ctx = canvas.getContext('2d');
-
         let width, height;
         const particles = [];
-        const MAX_PARTICLES = 80; // больше частиц
+        const MAX_PARTICLES = 40;
 
         function resize() {
             width = window.innerWidth;
@@ -263,16 +291,11 @@
             reset() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * height;
-                this.size = Math.random() * 4 + 1; // крупнее
-                this.speed = Math.random() * 0.6 + 0.3;
-                this.opacity = Math.random() * 0.8 + 0.4; // ярче
-                // Разные оттенки зелёного/голубого
-                const colors = [
-                    'rgba(0, 255, 200, ',    // #00ffc8
-                    'rgba(0, 170, 255, ',    // #00aaff
-                    'rgba(170, 0, 255, '     // #aa00ff
-                ];
-                this.color = colors[Math.floor(Math.random() * colors.length)];
+                this.size = Math.random() * 2 + 0.5;
+                this.speed = Math.random() * 0.3 + 0.1;
+                this.opacity = Math.random() * 0.4 + 0.1;
+                // Единый цвет, без градиентов
+                this.color = 'rgba(0, 255, 200, ';
             }
             update() {
                 this.y -= this.speed;
@@ -285,11 +308,7 @@
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fillStyle = this.color + this.opacity + ')';
-                // Добавим свечение
-                ctx.shadowColor = this.color + '0.8)';
-                ctx.shadowBlur = 8;
                 ctx.fill();
-                ctx.shadowBlur = 0; // сброс, чтобы тень не наследовалась
             }
         }
 
@@ -305,8 +324,7 @@
             }
             requestAnimationFrame(animate);
         }
-
         animate();
     </script>
 </body>
-                </html>
+    </html>
