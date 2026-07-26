@@ -3,74 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danil Versache — разработчик Telegram-ботов</title>
+    <meta name="description" content="Danil Versache — разработчик Telegram-ботов, веб-сайтов и систем автоматизации. Python, Kotlin, TypeScript. Создание чат-ботов, лендингов, интеграций.">
+    <meta name="keywords" content="разработчик телеграм ботов, python, kotlin, typescript, чат-боты, автоматизация, создание сайтов, веб-разработка, лендинг, интеграции, телеграм магазин, модерация чатов">
+    <title>Danil Versache — разработчик ботов и сайтов</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: #0f0f0f;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.6;
+            color: #d0d0d0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
             display: flex;
             justify-content: center;
             padding: 2rem 1rem;
         }
         .card {
-            max-width: 700px;
+            max-width: 720px;
             width: 100%;
             background: #1a1a1a;
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 0 30px rgba(0,255,200,0.1);
+            border-radius: 16px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 0 20px rgba(0,255,200,0.05);
         }
         h1 {
             font-size: 2.2rem;
-            margin-bottom: 0.3rem;
-            background: linear-gradient(135deg, #00ffc8, #00aaff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #ffffff;
+            letter-spacing: -0.5px;
         }
         .subtitle {
-            color: #aaa;
-            margin-bottom: 2rem;
+            color: #999;
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            font-weight: 400;
         }
         h2 {
-            margin: 1.8rem 0 0.8rem;
-            color: #00ffc8;
+            font-size: 1.3rem;
             font-weight: 600;
+            color: #00ffc8;
+            margin: 2rem 0 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #ccc;
         }
         ul {
             list-style: none;
             padding-left: 0;
+            margin-bottom: 1rem;
+        }
+        ul li {
+            margin-bottom: 0.6rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #bbb;
         }
         ul li::before {
-            content: "▹ ";
+            content: "—";
+            position: absolute;
+            left: 0;
             color: #00ffc8;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .service-item {
+            background: #222;
+            padding: 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+            color: #ddd;
         }
         .btn {
             display: inline-block;
             background: #00ffc8;
             color: #000;
-            padding: 0.8rem 2rem;
+            padding: 0.75rem 2rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             margin-top: 1.5rem;
-            transition: 0.3s;
-            border: none;
-            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 1rem;
         }
         .btn:hover { background: #00ddaa; }
-        .portfolio-item {
-            background: #222;
-            border-radius: 12px;
-            padding: 1rem;
-            margin: 0.5rem 0;
+        a { color: #00ffc8; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            border-top: 1px solid #2a2a2a;
+            margin: 2rem 0 1.5rem;
         }
-        a { color: #00ffc8; }
-        hr { border-color: #333; margin: 2rem 0 1rem; }
+        footer {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
         @media (max-width: 500px) {
-            .card { padding: 1.5rem; }
+            .card { padding: 2rem 1.5rem; }
             h1 { font-size: 1.8rem; }
         }
     </style>
@@ -78,36 +114,49 @@
 <body>
     <div class="card">
         <h1>Danil Versache</h1>
-        <p class="subtitle">Разработчик Telegram-ботов • Python • Автоматизация</p>
+        <p class="subtitle">Инженер-разработчик чат-ботов и веб-систем</p>
 
-        <h2>👋 Обо мне</h2>
-        <p>Создаю умных ботов для Telegram с 2024 года. Делаю модерацию, магазины, рассылки, интеграции с CRM и базами данных. Работаю на Python, aiogram, SQLite. Люблю сложные проекты с иерархией и админ-панелями.</p>
+        <h2>О себе</h2>
+        <p>
+            Проектирую и внедряю высоконагруженные Telegram-боты, автоматизированные системы и веб-интерфейсы. 
+            Работаю с современными технологиями: Python, Kotlin, TypeScript, SQL. 
+            Опыт коммерческой разработки с 2024 года. Открыт к сложным проектам и долгосрочному сотрудничеству.
+        </p>
 
-        <h2>🛠 Услуги</h2>
+        <h2>Ключевые компетенции</h2>
+        <div class="services-grid">
+            <div class="service-item">Telegram-боты (aiogram, telebot)</div>
+            <div class="service-item">Модерация и иерархии</div>
+            <div class="service-item">Магазины и приём платежей</div>
+            <div class="service-item">Веб-сайты и лендинги</div>
+            <div class="service-item">API-интеграции</div>
+            <div class="service-item">Базы данных (SQLite, PostgreSQL)</div>
+        </div>
+
+        <h2>Услуги</h2>
         <ul>
-            <li>Модераторы чатов с ролями, мутами, банами, варнами</li>
-            <li>Автоответчики, воронки, приветствия</li>
-            <li>Магазины с оплатой через Telegram Stars</li>
-            <li>Сбор статистики, логирование</li>
-            <li>Интеграция с внешними API</li>
+            <li>Разработка Telegram-ботов любой сложности — от простых автоответчиков до многоуровневых систем с админ-панелями</li>
+            <li>Создание веб-сайтов и лендингов (HTML/CSS, адаптивная вёрстка, GitHub Pages)</li>
+            <li>Автоматизация бизнес-процессов через ботов и скрипты</li>
+            <li>Интеграция с внешними API, платёжными системами, CRM</li>
+            <li>Сбор и анализ статистики, системы логирования</li>
+            <li>Консультации и сопровождение проектов</li>
         </ul>
 
-        <h2>📁 Портфолио</h2>
-        <div class="portfolio-item">
-            <strong>🌟 Бот «Дельтан»</strong><br>
-            Полная иерархия (11 ролей), мут/бан/варн/стикбан/пермбан, статистика, правила через канал. Более 20 команд.
-        </div>
-        <div class="portfolio-item">
-            <strong>🛒 AutoShopBot</strong><br>
-            Магазин цифровых товаров с корзиной, оплатой Telegram Stars и админ-панелью.
-        </div>
+        <h2>Технологический стек</h2>
+        <p><strong>Языки:</strong> Python (основной), Kotlin, TypeScript</p>
+        <p><strong>Библиотеки:</strong> aiogram, python-telegram-bot, Flask, FastAPI</p>
+        <p><strong>Базы данных:</strong> SQLite, PostgreSQL, Redis</p>
+        <p><strong>Инструменты:</strong> Git, Docker, Termux, GitHub Actions</p>
 
-        <h2>📞 Связаться</h2>
-        <p>Пиши в Telegram: <a href="https://t.me/EbenaVosh">@EbenaVosh</a></p>
+        <h2>Связаться</h2>
+        <p>Telegram: <a href="https://t.me/EbenaVosh">@EbenaVosh</a></p>
         <a class="btn" href="https://t.me/EbenaVosh">Написать в Telegram</a>
 
         <hr>
-        <p style="text-align: center; color: #555;">© 2026 Danil Versache. Работаю по всему миру.</p>
+        <footer>
+            Danil Versache — разработка ботов и веб-решений
+        </footer>
     </div>
 </body>
-  </html>
+</html>
